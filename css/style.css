@@ -76,7 +76,7 @@ header {
     text-shadow: 0rem 0rem .5rem white;
 }
 
-button.butt-mobile, i.fa-sort-down {
+button.butt-mobile, i.fa-sort-down, .more-log {
     display: none;
 } 
 
@@ -102,12 +102,6 @@ h1.logo-site {
 .fa-sign-out-alt {
     font-size: 2.5rem;
     transition: .3s;
-}
-
-.fa-sort-down:before {
-    position: relative;
-    bottom: 1rem;
-    padding: 0rem 1rem;
 }
 
 .container-corpo {
@@ -453,16 +447,21 @@ div.links-parceiros a {
         display: inline-block;
     }
 
+    .foto-log {
+        margin-right: 1rem;
+    }
+
     .container-2 i,
     .container-2 button {
         transition: 0s;
-        
+        margin: 0;
+        padding: 0;
     }
 
     .container-2 {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        padding: 2rem;
         z-index: 99;
         height: 0rem;
         transition: .1s;
@@ -473,6 +472,10 @@ div.links-parceiros a {
         position: absolute;
         right: 1%;
         height: 3rem;
+    }
+
+    button.more-log {
+        right: 3%;
     }
 
     .ativado {
@@ -486,7 +489,11 @@ div.links-parceiros a {
 
     .ativado .fa-sort-down {
         transform: rotate(-180deg);
-        padding-top: 1.5rem;
+    }
+
+    .ativado img.foto-log {
+        position: relative;
+        right: -8.4rem;
     }
 
     button.more-log {
@@ -604,7 +611,10 @@ div.links-parceiros a {
 
     .ativado .fa-sort-down {
         transform: rotate(-180deg);
-        padding-top: 2.5rem;
+    }
+
+    .ativado img.foto-log {
+        right: -8rem;
     }
 }
 
@@ -630,4 +640,16 @@ div.links-parceiros a {
         grid-row: 4;
     }
 
+}
+
+@media(max-width: 375px) {
+    .ativado img.foto-log {
+        right: -7.4rem;
+    }
+}
+
+@media(max-width: 320px) {
+    .ativado img.foto-log {
+        right: -5.4rem;
+    }
 }
